@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.body {
+  max-width: 50%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.country {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  margin: 1rem;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.header {
+  max-width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.header-text {
+  padding-right: 20px;
+}
+
+.search {
+  margin-left: 200px;
+  margin-right: 10px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid blue;
+}
+
+.table-header {
+  text-shadow: 2px 2px 5px rgb(97, 92, 92);
+}
+
+.country_name_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.left {
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: red;
+  border-radius: 10px;
+  color: #ccc;
+}
+
+.right {
+  padding-left: 20px;
+}
+
+.country-text {
+  padding-top: 20px;
+  padding-left: 110px;
+  padding-right: 110px;
+}
+
+@media (max-width: 1000px) {
+  .body {
+    max-width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  .header {
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header-text {
+    padding-right: 0;
+  }
+  .search {
+    margin-left: 0;
+    margin-right: 3px;
+    margin-bottom: 5px;
+  }
+  .country-text {
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
