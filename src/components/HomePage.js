@@ -11,7 +11,6 @@ function HomePage() {
   const [countries, setCountries] = useState([]);
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
-  const [sortOrder, setSortOrder] = useState('asc');
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -52,6 +51,7 @@ function HomePage() {
 
   const rows = countries
   .sort((a, b) => {
+    const sortOrder = 'asc';
     if (sortOrder === 'asc') {
       return a.name.common.localeCompare(b.name.common);
     } else {
