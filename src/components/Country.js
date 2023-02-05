@@ -41,7 +41,10 @@ function Country() {
 
   return (
     <div className="country">
-      <Card className="card" sx={{ maxWidth: "80%" }}>
+      <Card className="card" sx={{ maxWidth: "80%",
+              "@media (max-width: 1000px)": {
+                maxWidth: "100%",
+              }, }}>
         <div className="country_name_container">
           <Typography
             gutterBottom

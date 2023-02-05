@@ -89,7 +89,7 @@ function HomePage() {
           </div>
         </div>
       </AppBar>
-      <Table className="table">
+      <Table className="table" > 
         <TableHead>
           <TableRow className="table-header">
             <TableCell>Flag</TableCell>
