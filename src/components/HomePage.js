@@ -11,6 +11,7 @@ function HomePage() {
   const [countries, setCountries] = useState([]);
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
+  const [sortOrder, setSortOrder] = useState('asc');
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
