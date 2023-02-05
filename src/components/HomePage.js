@@ -6,11 +6,13 @@ import { Link } from "react-router-dom";
 import TablePagination from "@mui/material/TablePagination";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import IconButton from "@mui/material/IconButton";
+import { TableSortLabel } from '@mui/material';
 
 function HomePage() {
   const [countries, setCountries] = useState([]);
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
+  const [sortOrder, setSortOrder] = useState('asc');
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -46,14 +48,18 @@ function HomePage() {
       const data = await response.json();
       setCountries(data);
     }
-
     fetchData();
   };
 
-  document.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", handleClick);
-  });
-  const rows = countries.map((country) => {
+  const rows = countries
+  .sort((a, b) => {
+    if (sortOrder === 'asc') {
+      return a.name.common.localeCompare(b.name.common);
+    } else {
+      return b.name.common.localeCompare(a.name.common);
+    }
+  })
+  .map((country) => {
     let ls = [];
     for (let key in country.languages) {
       ls.push(country.languages[key]);
@@ -68,6 +74,7 @@ function HomePage() {
         la: ls,
       },
     };
+    
   });
 
   return (
@@ -89,7 +96,6 @@ function HomePage() {
           </div>
         </div>
       </AppBar>
-      <div className="table">
       <Table> 
         <TableHead className="table-header">
           <TableRow >
@@ -128,7 +134,6 @@ function HomePage() {
             ))}
         </TableBody>
       </Table>
-      </div>
       <TablePagination
         rowsPerPageOptions={[5, 10, 15, 20]}
         component="div"
