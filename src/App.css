@@ -103,6 +103,9 @@
   .body {
     max-width: 100%;
   }
+  .country {
+    max-width: 100%;
+  }
   .header {
     max-width: 100%;
     flex-direction: column;
