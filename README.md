@@ -1,6 +1,6 @@
 # Country App Created By Marita Ifemeni 2023
 
-Deployd using Netlify: [https://eloquent-biscochitos-9914ee.netlify.app]
+Deployd using Netlify: https://eloquent-biscochitos-9914ee.netlify.app
 ## Available Scripts
 
 In the project directory, you can run:
