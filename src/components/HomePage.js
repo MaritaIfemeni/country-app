@@ -89,18 +89,19 @@ function HomePage() {
           </div>
         </div>
       </AppBar>
-      <Table className="table" > 
-        <TableHead>
-          <TableRow className="table-header">
+      <div className="table">
+      <Table> 
+        <TableHead className="table-header">
+          <TableRow >
             <TableCell>Flag</TableCell>
-            <TableCell field="name">Name</TableCell>
+            <TableCell>Name</TableCell>
             <TableCell>Population</TableCell>
             <TableCell>Region</TableCell>
             <TableCell>Languages</TableCell>
             <TableCell>Read More</TableCell>
           </TableRow>
         </TableHead>
-        <TableBody>
+        <TableBody className="table-body">
           {rows
             .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
             .map((row) => (
@@ -127,6 +128,7 @@ function HomePage() {
             ))}
         </TableBody>
       </Table>
+      </div>
       <TablePagination
         rowsPerPageOptions={[5, 10, 15, 20]}
         component="div"

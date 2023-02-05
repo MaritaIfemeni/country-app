@@ -99,7 +99,7 @@
   padding-right: 110px;
 }
 
-@media (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
   .body {
     max-width: 100%;
   }
@@ -127,5 +127,19 @@
     padding-top: 5px;
     padding-left: 10px;
     padding-right: 10px;
+  }
+  .table {
+    display: flex;
+    flex-direction: column;
+  }
+  .table-header td, .table-header th {
+    display: inline-block
+  }
+  .table-body td, .table-body th {
+    display: flex;
+  }
+  .appbar {
+    display: flex;
+    flex-direction: column;
   }
 }
