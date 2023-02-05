@@ -1,10 +1,6 @@
 # Country App Created By Marita Ifemeni 2023
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-# Deployd:
-
-link here.
+Deployd: link here.
 ## Available Scripts
 
 In the project directory, you can run:
