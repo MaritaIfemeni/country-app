@@ -6,13 +6,11 @@ import { Link } from "react-router-dom";
 import TablePagination from "@mui/material/TablePagination";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import IconButton from "@mui/material/IconButton";
-import { TableSortLabel } from '@mui/material';
 
 function HomePage() {
   const [countries, setCountries] = useState([]);
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
-  const [sortOrder, setSortOrder] = useState('asc');
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
